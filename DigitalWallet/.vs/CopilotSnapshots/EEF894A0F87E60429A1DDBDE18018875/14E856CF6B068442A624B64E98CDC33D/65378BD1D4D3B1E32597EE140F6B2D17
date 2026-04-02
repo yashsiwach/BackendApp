@@ -1,0 +1,55 @@
+﻿using System.Security.Cryptography;
+using AuthService.Application.Interfaces;
+using AuthService.Application.Interfaces.Repositories;
+using AuthService.Domain.Entities;
+
+namespace AuthService.Application.Services;
+
+public class OTPServiceImpl : IOTPService
+{
+    private readonly IUserRepository _users;
+    private readonly IOTPRepository _otps;
+    private readonly ILogger<OTPServiceImpl> _logger;
+
+    /// <summary>Initializes OTP service dependencies for user lookup, OTP storage, and logging.</summary>
+    public OTPServiceImpl(IUserRepository users, IOTPRepository otps, ILogger<OTPServiceImpl> logger)
+    {
+        _users = users;
+        _otps = otps;
+        _logger = logger;
+    }
+
+    /// <summary>Generates a time-limited OTP for the user email and persists it for later verification.</summary>
+    public async Task SendOTPAsync(string email)
+    {
+        var user = await _users.FindByEmailAsync(email)?? throw new InvalidOperationException("User not found.");
+
+        var code = RandomNumberGenerator.GetInt32(100000, 1000000).ToString();
+
+        await _otps.AddAsync(new OTPLog
+        {
+            UserId = user.Id,
+            Code = code,
+            ExpiresAt = DateTime.UtcNow.AddMinutes(5)
+        });
+        await _otps.SaveAsync();
+
+        _logger.LogInformation("OTP sent to {Email}", email);
+    }
+
+    /// <summary>Validates the provided OTP code for the user email, marks it used, and returns verification result.</summary>
+    public async Task<bool> VerifyOTPAsync(string email, string code)
+    {
+        var user = await _users.FindByEmailAsync(email)
+            ?? throw new InvalidOperationException("User not found.");
+
+        var otp = await _otps.FindValidAsync(user.Id, code);
+        if (otp == null) return false;
+
+        otp.UsedAt = DateTime.UtcNow;
+        await _otps.SaveAsync();
+
+        _logger.LogInformation("OTP verified for {Email}", email);
+        return true;
+    }
+}

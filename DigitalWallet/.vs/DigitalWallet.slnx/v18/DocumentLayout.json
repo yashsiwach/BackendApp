@@ -1,0 +1,130 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E544CFB2-9142-4BEC-9871-0782A9AD593F}|src\\Services\\WalletService\\WalletService.csproj|c:\\users\\yashs\\documents\\ok\\digitalwallet\\src\\services\\walletservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E544CFB2-9142-4BEC-9871-0782A9AD593F}|src\\Services\\WalletService\\WalletService.csproj|solutionrelative:src\\services\\walletservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78C75BBF-8990-B974-0B71-5011839CC1C7}|src\\Services\\SupportTicketService\\SupportTicketService.csproj|c:\\users\\yashs\\documents\\ok\\digitalwallet\\src\\services\\supportticketservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78C75BBF-8990-B974-0B71-5011839CC1C7}|src\\Services\\SupportTicketService\\SupportTicketService.csproj|solutionrelative:src\\services\\supportticketservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4708395C-3968-7EE4-E2B3-70D9237D70D8}|src\\Services\\RewardsService\\RewardsService.csproj|c:\\users\\yashs\\documents\\ok\\digitalwallet\\src\\services\\rewardsservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4708395C-3968-7EE4-E2B3-70D9237D70D8}|src\\Services\\RewardsService\\RewardsService.csproj|solutionrelative:src\\services\\rewardsservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A1106C9-373E-FFAD-6460-144317825819}|src\\Services\\NotificationService\\NotificationService.csproj|c:\\users\\yashs\\documents\\ok\\digitalwallet\\src\\services\\notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5A1106C9-373E-FFAD-6460-144317825819}|src\\Services\\NotificationService\\NotificationService.csproj|solutionrelative:src\\services\\notificationservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{851EC61B-4CD5-F57A-FAD8-F25ADE548888}|src\\Services\\AdminService\\AdminService.csproj|c:\\users\\yashs\\documents\\ok\\digitalwallet\\src\\services\\adminservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{851EC61B-4CD5-F57A-FAD8-F25ADE548888}|src\\Services\\AdminService\\AdminService.csproj|solutionrelative:src\\services\\adminservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B8C34B8-9B22-1F3C-6A11-DAE5939D9ADF}|src\\Services\\AuthService\\AuthService.csproj|c:\\users\\yashs\\documents\\ok\\digitalwallet\\src\\services\\authservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4B8C34B8-9B22-1F3C-6A11-DAE5939D9ADF}|src\\Services\\AuthService\\AuthService.csproj|solutionrelative:src\\services\\authservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\WalletService\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\WalletService\\appsettings.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\WalletService\\appsettings.json",
+              "RelativeToolTip": "src\\Services\\WalletService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T14:41:30.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\SupportTicketService\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\SupportTicketService\\appsettings.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\SupportTicketService\\appsettings.json",
+              "RelativeToolTip": "src\\Services\\SupportTicketService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T14:41:11.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\RewardsService\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\RewardsService\\appsettings.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\RewardsService\\appsettings.json",
+              "RelativeToolTip": "src\\Services\\RewardsService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T14:40:41.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\NotificationService\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\NotificationService\\appsettings.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\NotificationService\\appsettings.json",
+              "RelativeToolTip": "src\\Services\\NotificationService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T14:40:13.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\AdminService\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\AdminService\\appsettings.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\AdminService\\appsettings.json",
+              "RelativeToolTip": "src\\Services\\AdminService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T14:39:32.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\AuthService\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\AuthService\\appsettings.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\ok\\DigitalWallet\\src\\Services\\AuthService\\appsettings.json",
+              "RelativeToolTip": "src\\Services\\AuthService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-02T14:38:39.512Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

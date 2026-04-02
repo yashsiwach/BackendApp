@@ -1,0 +1,69 @@
+[
+  {
+    "ContainingType": "RewardsService.Controllers.RewardsController",
+    "Method": "GetAccount",
+    "RelativePath": "api/rewards/account",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RewardsService.Controllers.RewardsController",
+    "Method": "GetCatalog",
+    "RelativePath": "api/rewards/catalog",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RewardsService.Controllers.RewardsController",
+    "Method": "Redeem",
+    "RelativePath": "api/rewards/redeem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RewardsService.Application.DTOs.RedeemRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RewardsService.Controllers.RewardsController",
+    "Method": "GetRedemptions",
+    "RelativePath": "api/rewards/redemptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RewardsService.Controllers.RewardsController",
+    "Method": "GetTransactions",
+    "RelativePath": "api/rewards/transactions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

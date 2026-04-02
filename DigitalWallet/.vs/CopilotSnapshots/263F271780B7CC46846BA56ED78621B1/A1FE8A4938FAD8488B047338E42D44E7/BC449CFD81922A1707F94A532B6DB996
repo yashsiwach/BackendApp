@@ -1,0 +1,29 @@
+﻿{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "Microsoft.AspNetCore": "Information"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost,1433;Database=AuthServiceDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=true"
+  },
+  "Jwt": {
+    "Key": "D1g1t4lW4ll3tSup3rS3cur3K3y!@#2024DigitalWalletApp",
+    "Issuer": "DigitalWallet.AuthService",
+    "Audience": "DigitalWallet.Clients",
+    "ExpiryMinutes": "60"
+  },
+  "RabbitMQ": {
+    "Host": "localhost",
+    "Username": "guest",
+    "Password": "guest"
+  },
+  "Kestrel": {
+    "Endpoints": {
+      "Http": {
+        "Url": "http://0.0.0.0:5001"
+      }
+    }
+  }
+}

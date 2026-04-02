@@ -1,0 +1,11 @@
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\bin\Debug\net8.0\SharedContracts.deps.json
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\bin\Debug\net8.0\SharedContracts.dll
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\bin\Debug\net8.0\SharedContracts.pdb
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\obj\Debug\net8.0\SharedContracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\obj\Debug\net8.0\SharedContracts.AssemblyInfoInputs.cache
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\obj\Debug\net8.0\SharedContracts.AssemblyInfo.cs
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\obj\Debug\net8.0\SharedContracts.csproj.CoreCompileInputs.cache
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\obj\Debug\net8.0\SharedContracts.dll
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\obj\Debug\net8.0\refint\SharedContracts.dll
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\obj\Debug\net8.0\SharedContracts.pdb
+C:\Users\yashs\Documents\ok\DigitalWallet\src\SharedContracts\obj\Debug\net8.0\ref\SharedContracts.dll

@@ -1,0 +1,220 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────
+#  Shared connection string template (overridden per service)
+# ─────────────────────────────────────────────────────────
+x-sql-env: &sql-base
+  SA_PASSWORD: "YourStrong@Password123"
+
+x-common-env: &common-env
+  ASPNETCORE_ENVIRONMENT: Development
+  RabbitMQ__Host: rabbitmq
+  RabbitMQ__Username: guest
+  RabbitMQ__Password: guest
+  Jwt__Key: "D1g1t4lW4ll3tSup3rS3cur3K3y!@#2024DigitalWalletApp"
+  Jwt__Issuer: "DigitalWallet.AuthService"
+  Jwt__Audience: "DigitalWallet.Clients"
+
+services:
+
+  # ── Infrastructure ──────────────────────────────────────
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourStrong@Password123"
+      MSSQL_PID: Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P 'YourStrong@Password123' -C -Q 'SELECT 1' || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    networks:
+      - digitalwallet
+
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"   # management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    networks:
+      - digitalwallet
+
+  # ── API Gateway ─────────────────────────────────────────
+
+  gateway:
+    build:
+      context: .
+      dockerfile: src/Gateway/Dockerfile
+    container_name: gateway
+    ports:
+      - "5000:5000"
+    environment:
+      <<: *common-env
+      ASPNETCORE_URLS: "http://+:5000"
+      Routes__0__DownstreamHostAndPorts__0__Host: "auth-service"
+      Routes__1__DownstreamHostAndPorts__0__Host: "wallet-service"
+      Routes__2__DownstreamHostAndPorts__0__Host: "rewards-service"
+      Routes__3__DownstreamHostAndPorts__0__Host: "notification-service"
+      Routes__4__DownstreamHostAndPorts__0__Host: "admin-service"
+      Routes__5__DownstreamHostAndPorts__0__Host: "support-service"
+    depends_on:
+      auth-service:
+        condition: service_started
+      wallet-service:
+        condition: service_started
+      rewards-service:
+        condition: service_started
+      notification-service:
+        condition: service_started
+      admin-service:
+        condition: service_started
+      support-service:
+        condition: service_started
+    networks:
+      - digitalwallet
+
+  # ── Microservices ────────────────────────────────────────
+
+  auth-service:
+    build:
+      context: .
+      dockerfile: src/Services/AuthService/Dockerfile
+    container_name: auth-service
+    ports:
+      - "5001:5001"
+    environment:
+      <<: *common-env
+      ASPNETCORE_URLS: "http://+:5001"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=AuthServiceDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=true"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - digitalwallet
+
+  wallet-service:
+    build:
+      context: .
+      dockerfile: src/Services/WalletService/Dockerfile
+    container_name: wallet-service
+    ports:
+      - "5002:5002"
+    environment:
+      <<: *common-env
+      ASPNETCORE_URLS: "http://+:5002"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=WalletServiceDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=true"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - digitalwallet
+
+  rewards-service:
+    build:
+      context: .
+      dockerfile: src/Services/RewardsService/Dockerfile
+    container_name: rewards-service
+    ports:
+      - "5003:5003"
+    environment:
+      <<: *common-env
+      ASPNETCORE_URLS: "http://+:5003"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=RewardsServiceDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=true"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - digitalwallet
+
+  notification-service:
+    build:
+      context: .
+      dockerfile: src/Services/NotificationService/Dockerfile
+    container_name: notification-service
+    ports:
+      - "5004:5004"
+    environment:
+      <<: *common-env
+      ASPNETCORE_URLS: "http://+:5004"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=NotificationServiceDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=true"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - digitalwallet
+
+  admin-service:
+    build:
+      context: .
+      dockerfile: src/Services/AdminService/Dockerfile
+    container_name: admin-service
+    ports:
+      - "5005:5005"
+    environment:
+      <<: *common-env
+      ASPNETCORE_URLS: "http://+:5005"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=AdminServiceDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=true"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - digitalwallet
+
+  support-service:
+    build:
+      context: .
+      dockerfile: src/Services/SupportTicketService/Dockerfile
+    container_name: support-service
+    ports:
+      - "5006:5006"
+    environment:
+      <<: *common-env
+      ASPNETCORE_URLS: "http://+:5006"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=SupportServiceDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=true"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - digitalwallet
+
+# ── Volumes & Networks ────────────────────────────────────
+
+volumes:
+  sqlserver_data:
+  rabbitmq_data:
+
+networks:
+  digitalwallet:
+    driver: bridge

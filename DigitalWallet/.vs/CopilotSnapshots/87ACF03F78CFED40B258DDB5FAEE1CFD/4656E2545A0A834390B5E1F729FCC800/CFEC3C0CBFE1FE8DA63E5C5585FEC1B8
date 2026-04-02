@@ -1,0 +1,33 @@
+﻿using MassTransit;
+using RewardsService.Application.Interfaces;
+using SharedContracts.Events;
+
+namespace RewardsService.Infrastructure.Consumers;
+
+/// <summary>Creates a rewards account when a new user registers.</summary>
+public class UserRegisteredConsumer : IConsumer<UserRegistered>
+{
+    private readonly IRewardsService _rewardsService;
+    private readonly ILogger<UserRegisteredConsumer> _logger;
+
+    public UserRegisteredConsumer(IRewardsService rewardsService, ILogger<UserRegisteredConsumer> logger)
+    {
+        _rewardsService = rewardsService;
+        _logger = logger;
+    }
+
+    public async Task Consume(ConsumeContext<UserRegistered> context)
+    {
+        var msg = context.Message;
+        _logger.LogInformation("Creating rewards account for new user {UserId}", msg.UserId);
+
+        // EarnPoints with 0 amount creates the account without awarding points
+        await _rewardsService.EarnPointsAsync(
+            userId: msg.UserId,
+            amount: 0m,
+            triggerType: "Registration",
+            referenceId: msg.UserId,
+            description: "Welcome reward"
+        );
+    }
+}

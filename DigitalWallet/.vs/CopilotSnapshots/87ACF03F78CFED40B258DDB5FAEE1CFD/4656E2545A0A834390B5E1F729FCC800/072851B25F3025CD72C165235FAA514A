@@ -1,0 +1,115 @@
+﻿using AuthService.Application.DTOs;
+using AuthService.Application.Interfaces;
+using AuthService.Application.Interfaces.Repositories;
+using AuthService.Application.Mappers;
+using AuthService.Domain.Entities;
+using MassTransit;
+using SharedContracts.Events;
+
+namespace AuthService.Application.Services;
+
+public class AuthServiceImpl : IAuthService
+{
+    private readonly IUserRepository _users;
+    private readonly IRefreshTokenRepository _refreshTokens;
+    private readonly ITokenService _tokenService;
+    private readonly IPublishEndpoint _publishEndpoint;
+    private readonly ILogger<AuthServiceImpl> _logger;
+
+    public AuthServiceImpl(IUserRepository users,IRefreshTokenRepository refreshTokens,ITokenService tokenService,IPublishEndpoint publishEndpoint,ILogger<AuthServiceImpl> logger)
+    {
+        _users           = users;
+        _refreshTokens   = refreshTokens;
+        _tokenService    = tokenService;
+        _publishEndpoint = publishEndpoint;
+        _logger          = logger;
+    }
+
+    public async Task<AuthResponse> SignupAsync(SignupRequest request)
+    {
+        var exists = await _users.ExistsAsync(request.Email, request.Phone);
+        if (exists)
+            throw new InvalidOperationException("User with this email or phone already exists.");
+
+        var user = new User
+        {
+            Email        = request.Email,
+            Phone        = request.Phone,
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
+            Role         = "User"
+        };
+
+        await _users.AddAsync(user);
+        await _users.SaveAsync();
+
+        _logger.LogInformation("User registered: {UserId} {Email}", user.Id, user.Email);
+
+        await _publishEndpoint.Publish(new UserRegistered
+        {
+            UserId     = user.Id,
+            Email      = user.Email,
+            Phone      = user.Phone,
+            Role       = user.Role,
+            OccurredAt = DateTime.UtcNow
+        });
+
+        return await IssueTokenPairAsync(user);
+    }
+
+    public async Task<AuthResponse> LoginAsync(LoginRequest request)
+    {
+        var user = await _users.FindByEmailAsync(request.Email);
+        if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
+            throw new UnauthorizedAccessException("Invalid email or password.");
+
+        if (!user.IsActive)
+            throw new UnauthorizedAccessException("Account is deactivated. Contact support.");
+
+        _logger.LogInformation("User logged in: {UserId}", user.Id);
+
+        return await IssueTokenPairAsync(user);
+    }
+
+    public async Task<AuthResponse> RefreshTokenAsync(string refreshToken)
+    {
+        var stored = await _refreshTokens.FindActiveByTokenAsync(refreshToken);
+        if (stored == null || stored.ExpiresAt < DateTime.UtcNow)
+            throw new UnauthorizedAccessException("Invalid or expired refresh token.");
+
+        stored.Revoked = true;
+        await _refreshTokens.SaveAsync();
+
+        return await IssueTokenPairAsync(stored.User);
+    }
+
+    public async Task LogoutAsync(Guid userId, string refreshToken)
+    {
+        var token = await _refreshTokens.FindActiveByUserAndTokenAsync(userId, refreshToken);
+        if (token != null)
+        {
+            token.Revoked = true;
+            await _refreshTokens.SaveAsync();
+        }
+
+        _logger.LogInformation("User logged out: {UserId}", userId);
+    }
+
+    // ──────── Private helpers ────────
+
+    private async Task<AuthResponse> IssueTokenPairAsync(User user)
+    {
+        var (accessToken, expiresAt) = _tokenService.GenerateAccessToken(user);
+
+        var refreshToken = new RefreshToken
+        {
+            UserId    = user.Id,
+            Token     = _tokenService.GenerateRefreshToken(),
+            ExpiresAt = DateTime.UtcNow.AddDays(7)
+        };
+
+        await _refreshTokens.AddAsync(refreshToken);
+        await _refreshTokens.SaveAsync();
+
+        return AuthMapper.ToAuthResponse(accessToken, refreshToken.Token, expiresAt, user);
+    }
+}

@@ -1,0 +1,22 @@
+﻿using AdminService.Application.DTOs;
+using AdminService.Application.Interfaces;
+using AdminService.Application.Interfaces.Repositories;
+
+namespace AdminService.Application.Services;
+
+public class DashboardServiceImpl : IDashboardService
+{
+    private readonly IActivityLogRepository _logs;
+
+    public DashboardServiceImpl(IActivityLogRepository logs) => _logs = logs;
+
+    public async Task<DashboardStatsDto> GetStatsAsync() => new()
+    {
+        PendingKYCCount   = await _logs.CountPendingKYCAsync(),
+        ApprovedKYCToday  = await _logs.CountKYCByStatusTodayAsync("Approved"),
+        RejectedKYCToday  = await _logs.CountKYCByStatusTodayAsync("Rejected"),
+        ActiveCampaigns   = await _logs.CountActiveCampaignsAsync(),
+        TotalCampaigns    = await _logs.CountAllCampaignsAsync(),
+        AdminActionsToday = await _logs.CountAdminActionsTodayAsync()
+    };
+}
