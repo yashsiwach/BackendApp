@@ -1,0 +1,272 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{76C0DDAA-DB9C-41E8-EF85-D3DC8BFD0A4C}|Reward Service\\Reward Service.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\reward service\\services\\rewardservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C0DDAA-DB9C-41E8-EF85-D3DC8BFD0A4C}|Reward Service\\Reward Service.csproj|solutionrelative:reward service\\services\\rewardservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C0DDAA-DB9C-41E8-EF85-D3DC8BFD0A4C}|Reward Service\\Reward Service.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\reward service\\controllers\\rewardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C0DDAA-DB9C-41E8-EF85-D3DC8BFD0A4C}|Reward Service\\Reward Service.csproj|solutionrelative:reward service\\controllers\\rewardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\paymentservice\\data\\paymentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\data\\paymentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F465746A-A2E0-0013-6EA6-B03BA41B90F2}|AdminService\\AdminService.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\adminservice\\services\\adminservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F465746A-A2E0-0013-6EA6-B03BA41B90F2}|AdminService\\AdminService.csproj|solutionrelative:adminservice\\services\\adminservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CDAB7B3-DE4F-6FF5-06F0-D824F083F1AF}|AuthService\\AuthService.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\authservice\\services\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CDAB7B3-DE4F-6FF5-06F0-D824F083F1AF}|AuthService\\AuthService.csproj|solutionrelative:authservice\\services\\rabbitmqpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CDAB7B3-DE4F-6FF5-06F0-D824F083F1AF}|AuthService\\AuthService.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\authservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6CDAB7B3-DE4F-6FF5-06F0-D824F083F1AF}|AuthService\\AuthService.csproj|solutionrelative:authservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DCA26C-751B-4BA7-A817-9D3304C9C016}|Gateway\\Gateway.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\gateway\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E3DCA26C-751B-4BA7-A817-9D3304C9C016}|Gateway\\Gateway.csproj|solutionrelative:gateway\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DCA26C-751B-4BA7-A817-9D3304C9C016}|Gateway\\Gateway.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E3DCA26C-751B-4BA7-A817-9D3304C9C016}|Gateway\\Gateway.csproj|solutionrelative:gateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DCA26C-751B-4BA7-A817-9D3304C9C016}|Gateway\\Gateway.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3DCA26C-751B-4BA7-A817-9D3304C9C016}|Gateway\\Gateway.csproj|solutionrelative:gateway\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3DCA26C-751B-4BA7-A817-9D3304C9C016}|Gateway\\Gateway.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\gateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E3DCA26C-751B-4BA7-A817-9D3304C9C016}|Gateway\\Gateway.csproj|solutionrelative:gateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3219CBD1-64BE-FDDD-C1D6-02B8F3C3FC4B}|WalletService\\WalletService.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\walletservice\\controllers\\walletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3219CBD1-64BE-FDDD-C1D6-02B8F3C3FC4B}|WalletService\\WalletService.csproj|solutionrelative:walletservice\\controllers\\walletcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\paymentservice\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\notificationservice\\services\\notificationconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\services\\notificationconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CDAB7B3-DE4F-6FF5-06F0-D824F083F1AF}|AuthService\\AuthService.csproj|c:\\users\\yashs\\documents\\github\\backendapp\\authservice\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CDAB7B3-DE4F-6FF5-06F0-D824F083F1AF}|AuthService\\AuthService.csproj|solutionrelative:authservice\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RewardController.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Reward Service\\Controllers\\RewardController.cs",
+              "RelativeDocumentMoniker": "Reward Service\\Controllers\\RewardController.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Reward Service\\Controllers\\RewardController.cs",
+              "RelativeToolTip": "Reward Service\\Controllers\\RewardController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAlwCsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T08:54:29.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RewardServices.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Reward Service\\Services\\RewardServices.cs",
+              "RelativeDocumentMoniker": "Reward Service\\Services\\RewardServices.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Reward Service\\Services\\RewardServices.cs",
+              "RelativeToolTip": "Reward Service\\Services\\RewardServices.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAHsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T08:53:06.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminServices.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\AdminService\\Services\\AdminServices.cs",
+              "RelativeDocumentMoniker": "AdminService\\Services\\AdminServices.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\AdminService\\Services\\AdminServices.cs",
+              "RelativeToolTip": "AdminService\\Services\\AdminServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T07:49:49.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RabbitMqPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\AuthService\\Services\\RabbitMqPublisher.cs",
+              "RelativeDocumentMoniker": "AuthService\\Services\\RabbitMqPublisher.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\AuthService\\Services\\RabbitMqPublisher.cs",
+              "RelativeToolTip": "AuthService\\Services\\RabbitMqPublisher.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T07:03:56.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\AuthService\\appsettings.json",
+              "RelativeDocumentMoniker": "AuthService\\appsettings.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\AuthService\\appsettings.json",
+              "RelativeToolTip": "AuthService\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-30T07:00:27.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Gateway\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Gateway\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Gateway\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Gateway\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-30T06:56:30.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Gateway\\Program.cs",
+              "RelativeDocumentMoniker": "Gateway\\Program.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Gateway\\Program.cs",
+              "RelativeToolTip": "Gateway\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T06:20:29.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Gateway\\ocelot.json",
+              "RelativeDocumentMoniker": "Gateway\\ocelot.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Gateway\\ocelot.json",
+              "RelativeToolTip": "Gateway\\ocelot.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-30T06:20:08.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Gateway\\appsettings.json",
+              "RelativeDocumentMoniker": "Gateway\\appsettings.json",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\Gateway\\appsettings.json",
+              "RelativeToolTip": "Gateway\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-30T06:19:59.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WalletController.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\WalletService\\Controllers\\WalletController.cs",
+              "RelativeDocumentMoniker": "WalletService\\Controllers\\WalletController.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\WalletService\\Controllers\\WalletController.cs",
+              "RelativeToolTip": "WalletService\\Controllers\\WalletController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T04:27:54.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\PaymentService\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\PaymentService\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "PaymentService\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T04:27:34.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PaymentDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\PaymentService\\Data\\PaymentDbContext.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Data\\PaymentDbContext.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\PaymentService\\Data\\PaymentDbContext.cs",
+              "RelativeToolTip": "PaymentService\\Data\\PaymentDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBwAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T04:27:19.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NotificationConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\NotificationService\\Services\\NotificationConsumer.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Services\\NotificationConsumer.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\NotificationService\\Services\\NotificationConsumer.cs",
+              "RelativeToolTip": "NotificationService\\Services\\NotificationConsumer.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwGYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T04:15:01.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\NotificationService\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "NotificationService\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\NotificationService\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "NotificationService\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T04:14:52.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\AuthService\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "AuthService\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\yashs\\Documents\\GitHub\\BackendApp\\AuthService\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "AuthService\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T04:14:31.067Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
